@@ -10,16 +10,16 @@
 	
 <!-- 	<link rel="stylesheet"  href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">    -->
 
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/ui-darkness/jquery-ui.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/start/jquery-ui.css">
 	 <!--  THEMES -->
 	
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="js/jquery.mobilemenu.js"></script>
-	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>	<!--  DEFAULT THEME-->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>	
+    <script src="js/jquery.mobilemenu.js"></script>
 
 	<script>
 		$(document).ready(function(){
@@ -27,14 +27,12 @@
 			$( "#infrastructure" ).buttonset();
 			$( "#products" ).buttonset();
 			$( "#number" ).selectmenu() ;
-	    	
+	    	$( "input[type=submit]" ).button();
 
 			
 	$("#dialog").dialog({
 		autoOpen: false,
 	    modal: true,
-
-
 		buttons: {
 		  Cancels: function() {
 		    $(this).dialog("close");
@@ -57,11 +55,12 @@
 	  e.preventDefault(); 
 	 } else if (!(email).match(emailReg)) {
 	    alert("Invalid Email...!!!!!!");
-	    
+    
 		alert("preventDefault stopped the default action......");
 		e.preventDefault();
 	  } else {  console.log( " success " );
 	     alert("Form Submitted Successfully......");
+              
   		 $("#dialog").dialog("open"	);
 	    }
 
@@ -164,7 +163,7 @@ How many employees do you have?
 
 	    	    
 <!--	     		SUBMIT BUTTON                   -->		  		    
-	<input id="sendButtonId"  type="submit" value="1 Submit">
+	<input id="sendButtonId"  type="submit" value="Submit">
 	
 <!--	     		DIALOG BOX CONTENT              -->		
 	<div id="dialog" title="Dialog Title" style="display:none;">Thank you for your inquiry </div>  		 			 
